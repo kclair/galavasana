@@ -1,1 +1,5 @@
-code as a yoga pose?  code as a yoga pose that suggests suspension in air.
+This code was written as a project to run rails 3.
+
+Basically, it takes code snippets and runs them, recording their run time, as well as any output.
+
+It uses Resque and Redis to run the code asynchronously.
