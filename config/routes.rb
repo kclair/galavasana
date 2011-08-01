@@ -1,4 +1,5 @@
 Galavasana::Application.routes.draw do
+  resources :codes
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

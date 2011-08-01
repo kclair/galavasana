@@ -1,0 +1,6 @@
+= form_for :code, :url => codes_path, :html => {:method => :post}  do |f|
+  Description:
+  %p= f.text_field :description
+  Write new code here:
+  %p= f.text_area :snippet
+  = submit_tag 'Submit'

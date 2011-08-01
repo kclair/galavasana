@@ -1,0 +1,7 @@
+#masthead
+  %h3 Galavasana :: code in mid-air 
+#nav
+  %ul
+    = yield :nav
+    %li= link_to image_tag('png/16/folder.png'), codes_path
+    %li= link_to image_tag('png/16/add.png'), new_code_path

@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>Galavasana</title>
-  <%= stylesheet_link_tag :all %>
+  <%= stylesheet_link_tag 'screen.css' %>
+  <%= stylesheet_link_tag :harsh %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="container">
+    <%= render :partial => 'layouts/masthead' %>
+    <div id='content'>
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

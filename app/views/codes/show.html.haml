@@ -1,0 +1,23 @@
+- content_for :nav do
+  %li= link_to image_tag('png/16/pencil.png'), edit_code_path(@code)
+
+%h3= @code.description
+Code:
+:harsh
+  #{@code.snippet}
+#copy
+  - form_tag codes_path, :method => :post do
+    = hidden_field_tag 'code[snippet]', @code.snippet
+    = hidden_field_tag 'code[description]', @code.description+ ' (copy)'
+    = hidden_field_tag 'copy', '1'
+    = submit_tag 'Copy code'
+%br
+= render :partial => 'code_status'
+Output:
+%pre= @code.output
+
+#rerun
+  - form_for @code do |f|
+    = f.hidden_field :status, :value => 'new'
+    = submit_tag 'Re-Run code'
+

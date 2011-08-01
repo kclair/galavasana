@@ -6,6 +6,7 @@ gem 'rails', '3.0.9'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'mysql2', '0.2.6'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -30,9 +31,21 @@ gem 'sqlite3'
 #   gem 'webrat'
 # end
 
+gem 'haml'
+gem 'sass'
+gem 'compass'
+gem 'spox-ultraviolet'  # ruby syntax highlighting
+gem 'resque'
+
 group :test do
   gem 'cucumber'
-  gem 'webrat'
+  gem 'cucumber-rails'
+  gem 'capybara'
   gem 'faker'
-  gem 'machinist'
+  gem 'machinist', '>= 2.0.0.beta2'
+  gem 'spork'
+  gem 'launchy'    # So you can do Then show me the page
+  gem 'database_cleaner'
+  gem 'pickle'
+  gem 'sham'
 end
