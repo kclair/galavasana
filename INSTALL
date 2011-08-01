@@ -1,0 +1,17 @@
+1. install rails 3.0.x
+
+2. install redis
+   http://redis.io/
+
+3. install gems
+   %> bundle install
+
+4. install harsh (for syntax highlighting)
+   %> rails plugin install git://github.com/kclair/harsh.git
+
+Before starting rails:
+
+1. start redis
+
+2. start resque:
+    %> rake resque:work QUEUE='*'
